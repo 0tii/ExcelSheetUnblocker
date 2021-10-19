@@ -1,14 +1,19 @@
 import zipfile, re, os, sys, resources.checks as checks
 from resources.updatezip import UpdateableZipFile as uzip
+from tkinter.filedialog import askopenfilename, askopenfile
+from tkinter import Tk
 
 file = not sys.argv.__contains__('--folder')
+cli = sys.argv.__contains__('--cli')
 filepath, folderpath = '',''
+
+if not cli: Tk().withdraw()
 
 # input
 if file:
-    filepath = input('Enter the path to the xlsx file. Both explicit and relative are valid.\n')
+    filepath = askopenfilename() if not cli else input('Enter the path to the xlsx file. Both explicit and relative are valid.\n')
 else:
-    folderpath = input('Enter the path to the target folder. Both explicit and relative are valid.\n')
+    folderpath = askopenfile() if not cli else input('Enter the path to the target folder. Both explicit and relative are valid.\n')
 
 #regex pattern to exclude sheetProtection
 strclean = re.compile('<sheetProtection.*?>')
