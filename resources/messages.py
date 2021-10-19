@@ -27,3 +27,7 @@ pathgood = '''\033[92mPath accepted\033[0m'''
 filegood = '''\033[92mFile accepted\033[0m'''
 
 invalidarg = '''\033[91mInvalid launch parameters provided\033[0m'''
+
+isfile = '''\033[91mPath is file, not directory\033[0m'''
+
+ispath = '''\033[91mPath is directory, not file\033[0m'''
