@@ -3,6 +3,10 @@
 
 backupsheets/
 __pycache__/
+build/
+dist/
+
 *.xlsx
 *.xls
 *.zip
+*.spec
