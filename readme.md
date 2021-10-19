@@ -10,7 +10,7 @@ Remove sheet protection from .xlsx files.
 Run the script/packaged executable from the command line.
 
 Universal unpackaged
-```
+```PowerShell
 py unblock.py [--cli] [--dir]
 ```
 
@@ -20,7 +20,7 @@ Powershell:
 ```
 
 Cmd
-```
+```PowerShell
 unblock.exe [--cli] [--dir]
 ```
 
