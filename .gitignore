@@ -5,6 +5,7 @@ backupsheets/
 __pycache__/
 build/
 dist/
+doc/
 
 *.xlsx
 *.xls
