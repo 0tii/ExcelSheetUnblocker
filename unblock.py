@@ -1,4 +1,4 @@
-import zipfile, re, os, sys
+import zipfile, re, os, sys, resources.checks as checks
 from resources.updatezip import UpdateableZipFile as uzip
 
 file = False
@@ -23,9 +23,14 @@ def processfile(excelfile):
         for fname, fcontent in sheetfiles.items():
             file.writestr(fname, fcontent.encode('utf-8'))
 
+# execute
 if file:
-    processfile(filepath)
+    if checks.checkFile(filepath):
+        processfile(filepath)
+        print('\033[92mFinished.\033[0m')
 else:
-    for item in os.listdir(folderpath):
-        if item.endswith('.xlsx'):
-            processfile(item)
+    if checks.checkPath(folderpath):
+        for item in os.listdir(folderpath):
+            if item.endswith('.xlsx'):
+                processfile(item)
+        print('\033[92mFinished.\033[0m')
