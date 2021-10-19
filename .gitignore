@@ -1,5 +1,6 @@
 # excel sheet unblocker
 # ©2021 0ti 
 
+backupsheets/
 __pycache__/
 *.xlsx
