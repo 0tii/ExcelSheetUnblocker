@@ -1,15 +1,15 @@
 xlshelp = '''\033[93m
-You have one or more .xls files in the target directory. That file format is not supported!
+You have one or more unsupported excel files in the target directory. Only .xlsx is supported.
 To use these files with this script, please follow these simple steps:
-1. Open the xls file in Excel
+1. Open the xl* file in Excel
 2. Go to file -> Save as...
 3. Save the file as .xlsx\n\033[0m
 '''
 
 oneslx = '''\033[93m
-Your file is of type xls. That file format is not supported!
+Your file is not supported. Only .xlsx is supported.
 To use this file with this script, please follow these simple steps:
-1. Open the xls file in Excel
+1. Open the xl* file in Excel
 2. Go to file -> Save as...
 3. Save the file as .xlsx\n\033[0m
 '''

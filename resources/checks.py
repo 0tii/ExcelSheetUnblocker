@@ -7,12 +7,12 @@ def checkpath(path):
     if os.path.isfile(path):
         print(messages.isfile)
         return False
-    count, scount = 0, 0
+    count, hcount = 0, 0
     for file in os.listdir(path):
         if file.endswith('.xlsx'): count += 1
-        if file.endswith('xls'): scount +=1
-        #other formats ...
-    if scount > 0: 
+        split = file.rsplit('.', 1)[-1]
+        if  split.startswith('xl') and not split.endswith('x'): hcount +=1
+    if hcount > 0: 
         print(messages.xlshelp)
     if count == 0:
         print(messages.nofiles)
@@ -27,12 +27,21 @@ def checkfile(path):
     if not os.path.isfile(path):
         print(messages.ispath)
         return False
-    if path.endswith('.xls'):
+    split = path.rsplit('.', 1)[-1]
+    if  split.startswith('xl') and not split.endswith('x'):
         print(messages.oneslx)
         return False
-
     if not path.endswith('.xlsx'): 
         print(messages.wrongfile)
         return False
     print(messages.filegood)
+    return True
+
+def checkfiles(paths):
+    for path in paths:
+        if not checkfile(path):
+            return False
+    if len(paths) == 0:
+        print(messages.nopath)
+        return False
     return True
