@@ -1,6 +1,6 @@
 import os, resources.messages as messages
 
-def checkPath(path):
+def checkpath(path):
     if not os.path.exists(path): 
         print(messages.nopath)
         return False
@@ -17,7 +17,7 @@ def checkPath(path):
     print(messages.pathgood)
     return True
 
-def checkFile(path):
+def checkfile(path):
     if not os.path.exists(path):
         print(messages.nofile)
         return False
@@ -30,4 +30,11 @@ def checkFile(path):
         print(messages.wrongfile)
         return False
     print(messages.filegood)
+    return True
+
+def checkargs(argv):
+    for arg in argv[0:]:
+        if arg != '--folder':
+            print(messages.invalidarg)
+            return False
     return True

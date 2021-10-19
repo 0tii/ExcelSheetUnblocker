@@ -1,12 +1,17 @@
 import zipfile, re, os, sys, resources.checks as checks
 from resources.updatezip import UpdateableZipFile as uzip
 
-file = False
-filepath = './test2.xlsx'
-folderpath = './'
+file = not sys.argv.__contains__('--folder')
+filepath, folderpath = '',''
+
+# input
+if file:
+    filepath = input('Enter the path to the xlsx file. Both explicit and relative are valid.\n')
+else:
+    folderpath = input('Enter the path to the target folder. Both explicit and relative are valid.\n')
 
 #regex pattern to exclude sheetProtection
-strclean = re.compile('<sheetProtection.*?>') 
+strclean = re.compile('<sheetProtection.*?>')
 
 def processfile(excelfile):
     sheetfiles = {}
@@ -25,11 +30,11 @@ def processfile(excelfile):
 
 # execute
 if file:
-    if checks.checkFile(filepath):
+    if checks.checkfile(filepath):
         processfile(filepath)
         print('\033[92mFinished.\033[0m')
 else:
-    if checks.checkPath(folderpath):
+    if checks.checkpath(folderpath):
         for item in os.listdir(folderpath):
             if item.endswith('.xlsx'):
                 processfile(item)
