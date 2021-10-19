@@ -4,6 +4,9 @@ Remove sheet protection from .xlsx files.
 
 ## How to use
 
+
+### Run
+
 Run the script/packaged executable from the command line.
 
 Universal unpackaged
@@ -21,6 +24,14 @@ Cmd
 unblock.exe [--cli] [--dir]
 ```
 
+### Selecting files
+
+- If starting without options, you will be presented a multi-file picker. Choose any amount of xlsx files to unblock, select 'Open' and you are done. ![Standard Picker](https://i.imgur.com/Ap3Y5aQ.png)
+
+- If starting with `--dir` option, you will be presented a directory picker. Select your directory and click 'Select Folder'. Unblocker will then check for and process all viable files in the directory. ![Directory Picker](https://i.imgur.com/YcOcP6O.png)
+
+- Should you want to run this as `--cli` application, you will be propmted to enter paths to the target files. In standard mode, you will only be able to point to a single file, in `--dir` mode, you will be able to supply a directory path.
+
 ### Options
 
 ## `--dir`
@@ -35,8 +46,8 @@ Written in Python 3.9.7, should work on 3.x. Depends solely on std libraries.
 
 ## Output
 
-Input-files will be overwritten with unblocked versions.
+Input-files will be overwritten with unlocked versions.
 
 ## Limits
 
-This only works on .xlsx files. Older excel formats should be converted using Excel 'Save As' -> '.xlsx'
+Only works on .xlsx files. Older excel formats should be converted using Excel, via 'Save As' -> '.xlsx'
