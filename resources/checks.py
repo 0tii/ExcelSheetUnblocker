@@ -31,10 +31,3 @@ def checkfile(path):
         return False
     print(messages.filegood)
     return True
-
-def checkargs(argv):
-    for arg in argv[0:]:
-        if arg != '--folder':
-            print(messages.invalidarg)
-            return False
-    return True

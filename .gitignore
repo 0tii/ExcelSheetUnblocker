@@ -4,3 +4,4 @@
 backupsheets/
 __pycache__/
 *.xlsx
+*.xls
