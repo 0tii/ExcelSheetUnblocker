@@ -30,7 +30,7 @@ unblock.exe [--cli] [--dir]
 
 - If starting with `--dir` option, you will be presented a directory picker. Select your directory and click 'Select Folder'. Unblocker will then check for and process all viable files in the directory. ![Directory Picker](https://i.imgur.com/aDC2FVj.png)
 
-- Should you want to run this as `--cli` application, you will be propmted to enter paths to the target files. In standard mode, you will only be able to point to a single file, in `--dir` mode, you will be able to supply a directory path.
+- Should you want to run this as `--cli` application, you will be prompted to enter paths to the target files. In standard mode, you will only be able to point to a single file, in `--dir` mode, you will be able to supply a directory path.
 
 ### Options
 
