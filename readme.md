@@ -51,3 +51,8 @@ Input-files will be overwritten with unlocked versions.
 ## Limits
 
 Only works on .xlsx files. Older excel formats should be converted using Excel, via 'Save As' -> '.xlsx'
+
+## Todo
+
+- More transparent logging
+
