@@ -55,4 +55,5 @@ Only works on .xlsx files. Older excel formats should be converted using Excel, 
 ## Todo
 
 - More transparent logging
+- Auto-convert xls to xlsx
 
