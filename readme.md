@@ -2,6 +2,9 @@
 
 Remove sheet protection from .xlsx files.
 
+> [!CAUTION]  
+> The (un-)zip functionality with .xlsx files is currently broken under Windows 11, therefore this app does only support up to Windows 10!
+
 ## How to use
 
 
